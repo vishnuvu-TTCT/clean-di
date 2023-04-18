@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "399481812665",
+    "project_id": "fir-test-project-52282",
+    "storage_bucket": "fir-test-project-52282.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:399481812665:android:1a4901cbb273cbfc0d4d68",
+        "android_client_info": {
+          "package_name": "com.example.dependency_injection"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "399481812665-51a9jl3qdgkdgvrvtjp1sat8jsc7m482.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlRe268AwXkyob_lvC0_hhfvqSJxO9x4Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "399481812665-51a9jl3qdgkdgvrvtjp1sat8jsc7m482.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "399481812665-olr5v5ecjj09slvuirqt8b2kvgimba35.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.dependencyInjection"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:399481812665:android:8d7bb0bc18e16d790d4d68",
+        "android_client_info": {
+          "package_name": "com.example.dependencyinjection"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "399481812665-51a9jl3qdgkdgvrvtjp1sat8jsc7m482.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlRe268AwXkyob_lvC0_hhfvqSJxO9x4Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "399481812665-51a9jl3qdgkdgvrvtjp1sat8jsc7m482.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "399481812665-olr5v5ecjj09slvuirqt8b2kvgimba35.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.dependencyInjection"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
