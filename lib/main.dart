@@ -9,6 +9,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:oktoast/oktoast.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 Future<void> main() async {
@@ -36,19 +38,33 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-      providers: [BlocProvider(create: (_) => sl<AuthCubit>())],
-      child: Builder(builder: (context) {
-        AppRoute.setStream(context);
-        return MaterialApp.router(
-          title: 'Flutter Demo',
-          theme: ThemeData(
-            primarySwatch: Colors.blue,
-          ),
-          routeInformationProvider: AppRoute.router.routeInformationProvider,
-          routeInformationParser: AppRoute.router.routeInformationParser,
-          routerDelegate: AppRoute.router.routerDelegate,
-        );
-      }),
+      providers: [
+        BlocProvider(
+          create: (_) => sl<AuthCubit>(),
+        )
+      ],
+      child: OKToast(
+        child: ScreenUtilInit(
+          designSize: const Size(375, 667),
+          minTextAdapt: true,
+          splitScreenMode: true,
+          builder: (BuildContext context, Widget? child) {
+            return Builder(builder: (context) {
+              AppRoute.setStream(context);
+              return MaterialApp.router(
+                title: 'Flutter Demo',
+                theme: ThemeData(
+                  primarySwatch: Colors.blue,
+                ),
+                routeInformationProvider:
+                    AppRoute.router.routeInformationProvider,
+                routeInformationParser: AppRoute.router.routeInformationParser,
+                routerDelegate: AppRoute.router.routerDelegate,
+              );
+            });
+          },
+        ),
+      ),
     );
   }
 }
