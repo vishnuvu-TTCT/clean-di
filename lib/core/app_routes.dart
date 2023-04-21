@@ -47,6 +47,11 @@ class AppRoute {
         builder: (x, y) => Container(),
       ),
       GoRoute(
+        path: Routes.dashboard.path,
+        name: Routes.dashboard.name,
+        builder: (x, y) => const DashboardPage(),
+      ),
+      GoRoute(
         path: Routes.login.path,
         name: Routes.login.name,
         builder: (x, y) => const AuthPage(),
@@ -65,7 +70,7 @@ class AppRoute {
         return isLoginPage ? null : Routes.login.path;
       }
       if (isLoginPage && sl<PrefManager>().isLogin) {
-        return Routes.root.path;
+        return Routes.dashboard.path;
       }
       return null;
     },

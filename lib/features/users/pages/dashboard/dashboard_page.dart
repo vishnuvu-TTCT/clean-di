@@ -17,22 +17,28 @@ class _DashboardPageState extends State<DashboardPage> {
   int _currentPage = 1;
   int _lastPage = 1;
   final List<User> _users = [];
-
+  
   @override
   void initState() {
     super.initState();
-    _scrollController.addListener(() async {
-      if (_scrollController.position.atEdge) {
-        if (_scrollController.position.pixels != 0) {
-          if (_currentPage < _lastPage) {
-            _currentPage++;
-            await context
-                .read<UsersCubit>()
-                .fetchUsers(UsersParams(page: _currentPage));
-          }
-        }
-      }
-    });
+
+    //TODO: MANAGE SCROLLING
+      context
+          .read<UsersCubit>()
+          .fetchUsers(UsersParams(page: _currentPage));
+
+    // _scrollController.addListener(() async {
+    //   if (_scrollController.position.atEdge) {
+    //     if (_scrollController.position.pixels != 0) {
+    //       if (_currentPage < _lastPage) {
+    //         _currentPage++;
+    //         await context
+    //             .read<UsersCubit>()
+    //             .fetchUsers(UsersParams(page: _currentPage));
+    //       }
+    //     }
+    //   }
+    // });
   }
 
   @override
