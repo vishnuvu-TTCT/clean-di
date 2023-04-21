@@ -107,7 +107,7 @@ class DioClient {
       return Left(
         ServerFailure(
           e.response?.data['description'] as String? ?? e.message,
-          message: '',
+          message: e.response?.data['error'],
         ),
       );
     }

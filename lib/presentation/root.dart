@@ -19,12 +19,10 @@ class RootLogin extends StatelessWidget {
             },
             icon: const Icon(Icons.logout)),
       ),
-      body: Container(
-        child: Center(
-          child: CupertinoButton(
-            onPressed: () => context.go(Routes.settings.path),
-            child: const Text('Settings'),
-          ),
+      body: Center(
+        child: CupertinoButton(
+          onPressed: () => context.go(Routes.settings.path),
+          child: const Text('Settings'),
         ),
       ),
     );

@@ -73,4 +73,5 @@ class Palette {
   static const Color black20 = Color(0x33000000);
   static const Color black25 = Color(0x40000000);
   static const Color black = Color(0xFF000000);
+  static const Color graphicblue = Color(0xFF6C63FF);
 }

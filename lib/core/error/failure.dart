@@ -13,8 +13,8 @@ class ServerFailure extends Failure {
   List<Object?> get props => [message];
 }
 
-class NodataFailure extends Failure {
-  const NodataFailure();
+class NoDataFailure extends Failure {
+  const NoDataFailure();
   @override
   List<Object?> get props => [];
 }

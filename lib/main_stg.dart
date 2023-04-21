@@ -1,11 +1,9 @@
 import 'dart:async';
-
 import 'package:dependencyinjection/config.dart';
 import 'package:dependencyinjection/dependency_injection.dart';
 import 'package:dependencyinjection/lzyct_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 import 'package:shared_preferences/shared_preferences.dart';
 
 Future<void> main() async {
@@ -13,9 +11,11 @@ Future<void> main() async {
   await serviceLocator();
 
   WidgetsFlutterBinding.ensureInitialized();
+  // await FirebaseServices().init();
 
-  /// Set env as production
+  /// Set env as staging
   environment = Environment.staging;
+
   runZonedGuarded(
     /// Lock device orientation to portrait
     () => SystemChrome.setPreferredOrientations(

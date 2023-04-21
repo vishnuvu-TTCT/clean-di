@@ -10,6 +10,7 @@ class ColorLoader extends StatefulWidget {
   const ColorLoader({super.key, this.radius = 30.0, this.dotRadius = 6.0});
 
   @override
+  // ignore: library_private_types_in_public_api
   _ColorLoaderState createState() => _ColorLoaderState();
 }
 

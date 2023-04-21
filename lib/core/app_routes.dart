@@ -1,6 +1,5 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:dependencyinjection/features/auth/pages/login/login.dart';
-import 'package:dependencyinjection/presentation/root.dart';
+import 'package:dependencyinjection/features/auth/pages/login/login_page.dart';
+import 'package:dependencyinjection/features/users/users.dart';
 import 'package:dependencyinjection/presentation/settings.dart';
 import 'package:dependencyinjection/utils/helper/go_router_stream.dart';
 import 'package:dependencyinjection/utils/helper/helper.dart';
@@ -40,7 +39,7 @@ class AppRoute {
       GoRoute(
           path: Routes.root.path,
           name: Routes.root.name,
-          builder: (x, y) => const RootLogin(),
+          builder: (x, y) => const DashboardPage(),
           routes: const []),
       GoRoute(
         path: Routes.splashScreen.path,
